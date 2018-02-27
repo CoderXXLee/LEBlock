@@ -9,8 +9,34 @@
 #import <Foundation/Foundation.h>
 
 //weakSelf
-#define BMWeakObject(name, obj) __weak __typeof (obj)name = obj
-#define BMWself BMWeakObject(bself, self);
+
+#if DEBUG
+#define le_keywordify @autoreleasepool {}
+#else
+#define le_keywordify @try {} @catch (...) {}
+#endif
+
+#define le_metamacro_concat(A, B) A ## B
+
+#define le_weakify_(VAR) \
+__weak __typeof__(VAR) le_metamacro_concat(VAR, _weak_) = (VAR);
+
+#define le_strongify_(VAR) \
+__strong __typeof__(VAR) VAR = le_metamacro_concat(VAR, _weak_);
+
+#define LEWeakify(x) \
+le_keywordify \
+le_weakify_(x)
+
+#define LEStrongify(x) \
+le_keywordify \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+le_strongify_(x) \
+_Pragma("clang diagnostic pop")
+
+#define LEWeakifySelf LEWeakify(self)
+#define LEStrongifySelf LEStrongify(self)
 
 typedef void (^EventsBlock)( );
 

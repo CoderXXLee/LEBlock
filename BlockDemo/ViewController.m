@@ -29,19 +29,22 @@
         NSLog(@"%@", title);
     }];
     
-    [test.blockManager addEvent:@"btn2" handler:^(NSString *title, NSArray *arr){
+    [test.blockManager addEvent:@"btn2" handler:^(NSString *title, NSArray *arr) {
         NSLog(@"%@-%@", title, arr);
     }];
     
-    [test.blockManager addEvent:@"btn2" handler:^(NSString *title, NSArray *arr){
+    [test.blockManager addEvent:@"btn2" handler:^(NSString *title, NSArray *arr) {
         NSLog(@"第二个订阅者：%@-%@", title, arr);
     }];
     
-    [test.blockManager addEvent:@"btn3" handler:^(NSString *title, NSArray *arr){
+    [test.blockManager addEvent:@"btn3" handler:^(NSString *title, NSArray *arr) {
         NSLog(@"第1个订阅者:%@-%@", title, arr);
     }];
-    [test.blockManager addEvent:@"btn3" handler:^(NSString *title, NSArray *arr){
+    [test.blockManager addEvent:@"btn3" handler:^(NSString *title, NSArray *arr) {
         NSLog(@"第2个订阅者:%@-%@", title, arr);
+    }];
+    [test.blockManager addEvent:@"btn3" handler:^(NSString *title) {
+        NSLog(@"第3个订阅者:%@", title);
     }];
 }
 

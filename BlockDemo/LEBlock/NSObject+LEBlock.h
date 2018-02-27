@@ -15,4 +15,5 @@
  事件管理
  */
 @property(nonatomic, strong) LEBlockManager *blockManager;
+
 @end

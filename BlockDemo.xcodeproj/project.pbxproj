@@ -251,7 +251,7 @@
 				TargetAttributes = {
 					F5721EBE1DDFE8770012A5F8 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 9NJ4K7EA48;
+						DevelopmentTeam = T2RR74LEMP;
 						ProvisioningStyle = Automatic;
 					};
 					F5721ED71DDFE8770012A5F8 = {
@@ -473,8 +473,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9NJ4K7EA48;
+				DEVELOPMENT_TEAM = T2RR74LEMP;
 				INFOPLIST_FILE = BlockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LE.BlockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,8 +486,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9NJ4K7EA48;
+				DEVELOPMENT_TEAM = T2RR74LEMP;
 				INFOPLIST_FILE = BlockDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LE.BlockDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

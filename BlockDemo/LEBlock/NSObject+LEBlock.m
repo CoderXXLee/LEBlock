@@ -21,7 +21,9 @@ static const void *NSObjectHandlersKey = &NSObjectHandlersKey;
     }
     return events;
 }
+
 - (void)setBlockManager:(LEBlockManager *)blockManager {
     objc_setAssociatedObject(self, NSObjectHandlersKey, blockManager, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
 @end
